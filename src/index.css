@@ -7,6 +7,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: linear-gradient(to left bottom, #fff1e6, #f4eedf,
+      #e7ecdb, #d8eadb, #cae7df, #c5e6e4, #c3e5e9, #c3e3ee,
+      #c9e4f3, #cfe5f8, #d7e6fb, #dfe7fd);
 }
 
 code {
