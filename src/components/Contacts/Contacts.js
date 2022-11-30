@@ -5,6 +5,7 @@ import { selectContacts } from 'redux/selectors';
 
 import { ListContacts, ItemContacts, Btn } from './Contacts.styled';
 import { setStatusFilter } from 'redux/filterSlice';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export const FormContacts = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ export const FormContacts = () => {
       {contactsFilter.map(contact => (
         <ItemContacts key={contact.id}>
                     {contact.name}:     {contact.number}
-                    <Btn type="button" onClick={()=>dispatch(deleteContacts(contact.id))}>
+                    <Btn type="button" onClick={()=>dispatch(deleteContacts(contact.id)) && Notify.info('Delete contact')}>
                       Delete
                     </Btn>
         </ItemContacts>

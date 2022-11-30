@@ -33,7 +33,8 @@ border-radius: 2px;
 `
 const Forma = styled(Form)`
 padding: 20px;
-border: 1px solid #7FB3D5;
+border: 0px solid #7FB3D5;
+box-shadow: 6px 2px 10px -1px rgba(127, 179, 213, 1);
 `
 export const FormLabel = () => {
 
@@ -50,9 +51,9 @@ export const FormLabel = () => {
         contacts.find(contact => contact.name.toLowerCase() === values.name.toLowerCase())
        ? Notify.info('Contacts is already in list-contacts')
        
-       : dispatch(addContacts( values )) && resetForm();
+       : dispatch(addContacts( values ))   && resetForm();
         //dispatch(addContacts( values ));
-        
+        Notify.success('Add new contact'); 
         
   };
 
