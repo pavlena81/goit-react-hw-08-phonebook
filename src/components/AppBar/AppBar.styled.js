@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
@@ -10,3 +12,5 @@ export const Header = styled.div`
   box-shadow: 6px 2px 10px -5px rgba(127, 179, 213, 1);
   
   `
+
+ 
