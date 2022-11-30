@@ -8,7 +8,8 @@ const styles = {
     justifyContent: 'center',
   },
   title: {
-    fontWeight: 500,
+    fontWeight: 700,
+    textTransform: 'uppercase',
     fontSize: 48,
     textAlign: 'center',
     gap: 10,
@@ -19,8 +20,8 @@ export default function Home() {
   return (
     <div style={styles.container}>
         <h1 style={styles.title}>
-        <FcContacts />      
-        Phonebook welcome page{' '}
+        <FcContacts/>      
+         Phonebook{' '}
         
       </h1>
     </div>

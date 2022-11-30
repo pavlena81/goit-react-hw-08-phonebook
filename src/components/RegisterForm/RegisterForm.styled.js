@@ -2,8 +2,12 @@ import styled from "styled-components";
 
 export const FormRegister = styled.form`
     width: 320px;
+    margin: 0 auto;
+    margin-top: 150px;
     padding: 20px;
-    border: 1px solid #7FB3D5;
+    border: 0px solid #7FB3D5;
+    box-shadow: 6px 2px 10px -5px rgba(127, 179, 213, 1);
+    box-shadow: 6px 2px 10px -1px rgba(127, 179, 213, 1);
 `
 
 export const LabelRegister = styled.label`

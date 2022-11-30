@@ -1,6 +1,6 @@
 
 import { useAuth } from 'hooks';
-import { LinkNavigation } from './Navigation.styled';
+import { LinkNavigation, IconHome } from './Navigation.styled';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
@@ -8,6 +8,7 @@ export const Navigation = () => {
   return (
     <nav>
       <LinkNavigation to="/">
+        <IconHome/>
         Home
       </LinkNavigation>
       {isLoggedIn && (
