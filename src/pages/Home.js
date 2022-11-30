@@ -9,7 +9,7 @@ const styles = {
   },
   title: {
     fontWeight: 700,
-    textTransform: 'uppercase',
+    // textTransform: 'uppercase',
     fontSize: 48,
     textAlign: 'center',
     gap: 10,
@@ -21,7 +21,7 @@ export default function Home() {
     <div style={styles.container}>
         <h1 style={styles.title}>
         <FcContacts/>      
-         Phonebook{' '}
+         Phonebook manager welcome page{' '}
         
       </h1>
     </div>

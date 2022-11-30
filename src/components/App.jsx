@@ -21,6 +21,7 @@ import { PrivateRoute } from './PrivateRout';
 import { RestrictedRoute } from './RestrictedRoute'; 
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'hooks'; 
+import { Loader } from './Loader/Loader';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -43,8 +44,8 @@ export const App = () => {
 
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
-  ) : (
+     <Loader/>)
+   : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
