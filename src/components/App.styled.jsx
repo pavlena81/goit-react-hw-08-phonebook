@@ -15,6 +15,7 @@ export const Box = styled.div`
 export const Container = styled.div`
         height: '150vh',
         display: 'flex',
+        
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',

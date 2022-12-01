@@ -1,8 +1,7 @@
 
 import { useAuth } from 'hooks';
 import { LinkNavigation, IconHome } from './Navigation.styled';
-//import { FcMultipleSmartphones } from 'react-icons/fc';
-//import { FcContacts } from 'react-icons/fc';
+
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
@@ -15,12 +14,11 @@ export const Navigation = () => {
       </LinkNavigation>
       {isLoggedIn && (
         <>
-        <LinkNavigation to="/phonebook">
-            {/* <FcContacts /> */}
+        <LinkNavigation to="/phonebook">           
             Phonebook
-        </LinkNavigation>  
-        <LinkNavigation to="/contacts">
-          {/* <FcMultipleSmartphones/> */}
+          </LinkNavigation>  
+          
+        <LinkNavigation to="/contacts">          
             Contacts
         </LinkNavigation>
         </>
