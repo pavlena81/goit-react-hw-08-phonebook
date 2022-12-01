@@ -11,8 +11,9 @@ const styles = {
     fontWeight: 700,
     // textTransform: 'uppercase',
     fontSize: 48,
-    textAlign: 'center',
+    // textAlign: 'center',
     gap: 10,
+    display: 'flex',
   },
 };
 

@@ -7,6 +7,8 @@ import { ListContacts, ItemContacts, Btn } from './Contacts.styled';
 import { setStatusFilter } from 'redux/filterSlice';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
+import { RiDeleteBinLine} from 'react-icons/ri';
+
 export const FormContacts = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
@@ -27,7 +29,8 @@ export const FormContacts = () => {
         <ItemContacts key={contact.id}>
                     {contact.name}:     {contact.number}
                     <Btn type="button" onClick={()=>dispatch(deleteContacts(contact.id)) && Notify.info('Delete contact')}>
-                      Delete
+            
+            <RiDeleteBinLine/>
                     </Btn>
         </ItemContacts>
       )

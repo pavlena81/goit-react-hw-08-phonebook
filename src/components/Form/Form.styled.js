@@ -9,9 +9,17 @@ padding-top: 20px;
 `
 
 export const Btn = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+
+    width: 200px;
+    height: 44px;
+
     font-size: 16px;
     padding: 10px;
-    border-radius: 50px;
+    border-radius: 22px;
     border: none;
     background-color: #BEE1E6;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
