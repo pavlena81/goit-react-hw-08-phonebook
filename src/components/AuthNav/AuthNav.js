@@ -1,12 +1,12 @@
 
-import { LinkAuthNav, IconRegForm, IconLogIn} from './AuthNav.styled';
+import { LinkAuthNav, IconLogIn} from './AuthNav.styled';
 
 
 export const AuthNav = () => {
   return (
     <div>
       <LinkAuthNav to="/register">
-        <IconRegForm/>
+        {/* <IconRegForm/> */}
         Register
       </LinkAuthNav>
       <LinkAuthNav to="/login">

@@ -12,11 +12,11 @@ export const RegisterForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    const form = e.currentTarget.elements;
+    const form = e.currentTarget;
 
-    if (form.name.value ==='' ||
-      form.email.value === '' ||
-     form.password.value === '') {
+    if (form.elements.name.value ==='' ||
+      form.elements.email.value === '' ||
+     form.elements.password.value === '') {
       return toast.warning('please fill an all fields')
       
     }
