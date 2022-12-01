@@ -8,7 +8,7 @@ const styles = {
     justifyContent: 'center',
   },
   title: {
-    fontWeight: 500,
+    fontWeight: 700,
     fontSize: 48,
     gap: 10,
     display: 'flex',
