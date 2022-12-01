@@ -27,7 +27,7 @@ const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
-
+const PhonebookPage = lazy(() => import('../pages/Phonebook'));
 
 
 
@@ -60,7 +60,13 @@ export const App = () => {
           element={
             <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
           }
-        />
+          />
+        <Route
+          path="/phonebook"
+          element={
+            <PrivateRoute redirectTo="/login" component={<PhonebookPage />} />
+          }
+        />  
         <Route
           path="/contacts"
           element={
