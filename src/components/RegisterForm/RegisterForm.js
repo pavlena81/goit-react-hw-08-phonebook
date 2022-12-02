@@ -17,8 +17,7 @@ export const RegisterForm = () => {
     if (form.elements.name.value ==='' ||
       form.elements.email.value === '' ||
      form.elements.password.value === '') {
-      return toast.warning('please fill an all fields')
-      
+      return toast.warning('please fill an all fields')      
     }
 
     dispatch(

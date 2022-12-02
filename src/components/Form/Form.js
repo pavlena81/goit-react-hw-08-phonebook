@@ -52,8 +52,7 @@ export const FormLabel = () => {
             ? Notify.info('Contacts is already in list-contacts')
        
             : dispatch(addContacts(values)) && Notify.success('Add new contact');
-        //dispatch(addContacts( values ));
-        // Notify.success('Add new contact'); 
+            // Notify.success('Add new contact'); 
         resetForm();
   };
 
