@@ -49,12 +49,12 @@ export const FormLabel = () => {
     
         values.id = nanoid();
         contacts.find(contact => contact.name.toLowerCase() === values.name.toLowerCase())
-       ? Notify.info('Contacts is already in list-contacts')
+            ? Notify.info('Contacts is already in list-contacts')
        
-       : dispatch(addContacts( values ))   && resetForm();
+            : dispatch(addContacts(values)) && Notify.success('Add new contact');
         //dispatch(addContacts( values ));
-        Notify.success('Add new contact'); 
-        
+        // Notify.success('Add new contact'); 
+        resetForm();
   };
 
 

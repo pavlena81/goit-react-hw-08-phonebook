@@ -1,17 +1,3 @@
-// import { fetchContacts } from 'redux/operations';
-// import { FormLabel } from './Form/Form'; 
-// import { Filter } from './Filter/Filter';
-// import { FormContacts } from './Contacts/Contacts'; 
-// //import { nanoid } from "nanoid";
-// import { useDispatch, useSelector } from "react-redux";
-// import { useEffect } from "react";
-
-// import { Container, Box, Title, SubTitle} from 'components/App.styled';
-// import { FcContacts } from 'react-icons/fc';
-// import { FcMultipleSmartphones } from 'react-icons/fc';
-// import { selectError, selectIsLoading } from 'redux/selectors';
-// import { Loader } from './Loader/Loader';
-//====================================================
 
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
@@ -28,7 +14,7 @@ const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
 const PhonebookPage = lazy(() => import('../pages/Phonebook'));
-
+const NotFound = lazy(() => import('pages/NotFound'));
 
 
 export const App = () => {
@@ -72,60 +58,10 @@ export const App = () => {
           element={
             <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
           }
-        />
+          />
+        <Route path="*" element={<NotFound/>}/>  
       </Route>
     </Routes>
   );
-  // const dispatch = useDispatch();
-  // const isLoading = useSelector(selectIsLoading);
-  // const error = useSelector(selectError);
-
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // },[dispatch])
-     
   
-  
-  // return (
-  //   <Box>
-  //     <Container >
-          
-  //         <Title><FcContacts />
-  //           Phonebook          
-  //         </Title> 
-  //         <FormLabel/>
-          
-  //         <SubTitle><FcMultipleSmartphones/>
-  //           Contacts
-  //         </SubTitle>
-  //         <Filter />
-          
-  //        <FormContacts/>  
-  //        {isLoading && !error && <Loader/>} 
-  //     </Container>
-  //   </Box> 
-  //  );
  }
-
-
-
-
-
-
-
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };
