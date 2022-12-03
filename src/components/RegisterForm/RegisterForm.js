@@ -34,15 +34,17 @@ export const RegisterForm = () => {
     <FormRegister onSubmit={handleSubmit} autoComplete="off">
       <LabelRegister>
         Username
-        <InputRegister type="text" name="name" />
+        <InputRegister type="text" name="name" placeholder='..name'/>
       </LabelRegister>
       <LabelRegister>
         Email
-        <InputRegister  type="email" name="email" />
+        <InputRegister  type="email" name="email" placeholder='..email'/>
       </LabelRegister>
       <LabelRegister>
         Password
-        <InputRegister  type="password" name="password" />
+          <InputRegister type="password" name="password" placeholder='..password'
+            pattern="^(?=.*[A-Za-z])[A-Za-z\d]{7,}$"
+            title='password have to contain Minimum seven characters, at least one uppercase letter' />
       </LabelRegister>
         <BtnRegForm type="submit">Register</BtnRegForm>
         <ToastContainer />
