@@ -5,7 +5,7 @@ const NotFound = () => {
     <main style={{ textAlign: "center" }}>
       {/* <Helmet> */}
       <b style={{ fontSize: 64 }}>404</b>
-      <p>Sorry, we couldn't find that page :(</p>
+      <p>Sorry, server cannot find the resource :(</p>
       {/* </Helmet>  */}
     </main>
   );
