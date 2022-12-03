@@ -19,7 +19,7 @@ export const RegisterForm = () => {
      form.elements.password.value === '') {
       return toast.warning('please fill an all fields')      
     }
-
+    
     dispatch(
       register({
         name: form.elements.name.value,
@@ -44,7 +44,7 @@ export const RegisterForm = () => {
         Password
           <InputRegister type="password" name="password" placeholder='..password'
             pattern="^(?=.*[A-Za-z])[A-Za-z\d]{7,}$"
-            title='password have to contain Minimum seven characters, at least one uppercase letter' />
+            title='password have to contain minimum seven symbols, at least one uppercase letter' />
       </LabelRegister>
         <BtnRegForm type="submit">Register</BtnRegForm>
         <ToastContainer />

@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import { FormLogin, LabelLogin, InputLogin, BtnLogForm } from './LoginForm.styled';
 
-
+import {ToastContainer, toast } from "react-toastify";
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,11 @@ export const LoginForm = () => {
     e.preventDefault();
 
     const form = e.currentTarget;
-    
+    if (
+      form.elements.email.value === '' ||
+     form.elements.password.value === '') {
+      return toast.warning('please fill an all fields')      
+    }
    
     dispatch(
       logIn({
@@ -33,7 +37,7 @@ export const LoginForm = () => {
         <InputLogin type="password" name="password" placeholder='..password' />
       </LabelLogin>
        <BtnLogForm type="submit">Log In</BtnLogForm>
-       
+      <ToastContainer/> 
     </FormLogin>
   );
 }; 

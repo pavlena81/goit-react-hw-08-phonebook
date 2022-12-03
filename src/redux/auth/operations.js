@@ -49,6 +49,7 @@ export const logIn = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
+      toast.error('something went wrong, please correct data')
       return thunkAPI.rejectWithValue(error.message);
     }
   }
