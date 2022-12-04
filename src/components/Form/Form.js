@@ -51,8 +51,8 @@ export const FormLabel = () => {
         contacts.find(contact => contact.name.toLowerCase() === values.name.toLowerCase())
             ? Notify.info('Contacts is already in list-contacts')
        
-            : dispatch(addContacts(values)) && resetForm();
-            Notify.success('Add new contact');
+            : dispatch(addContacts(values)) && resetForm() &&  Notify.success('Add new contact');
+           
             
         
   };
